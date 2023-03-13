@@ -22,26 +22,45 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 //----------------------------------------------------------------------------------------------------------------
-const sections = document.querySelectorAll("#header, #about-me, #skills, #projects, #contacts");
-const navLinks = document.querySelectorAll(".header__item");
+// получаем ссылки-якори
+const links = document.querySelectorAll('.header__item');
 
-window.addEventListener("scroll", () => {
-   const currentScroll = window.pageYOffset;
+// получаем блоки
+const aboutMe = document.getElementById('about-me');
+const skills = document.getElementById('skills');
+const projects = document.getElementById('projects');
+const contacts = document.getElementById('contacts');
 
-   sections.forEach(section => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.clientHeight;
-      if (currentScroll >= sectionTop - sectionHeight * 0.5 && currentScroll < sectionTop + sectionHeight * 0.5) {
-         section.classList.add("active");
-         const index = Array.from(sections).indexOf(section);
-         navLinks[index].classList.add("active");
-      } else {
-         section.classList.remove("active");
-         const index = Array.from(sections).indexOf(section);
-         navLinks[index].classList.remove("active");
-      }
+// функция для проверки позиции блоков и добавления класса active
+function checkPosition() {
+   const currentPosition = window.pageYOffset + 100;
+
+   if (currentPosition >= aboutMe.offsetTop && currentPosition < skills.offsetTop) {
+      addActiveClass(links[1]);
+   } else if (currentPosition >= skills.offsetTop && currentPosition < projects.offsetTop) {
+      addActiveClass(links[2]);
+   } else if (currentPosition >= projects.offsetTop && currentPosition < contacts.offsetTop) {
+      addActiveClass(links[3]);
+   } else if (currentPosition >= contacts.offsetTop) {
+      addActiveClass(links[4]);
+   } else {
+      addActiveClass(links[0]);
+   }
+}
+
+// функция для добавления класса active
+function addActiveClass(link) {
+   links.forEach((item) => {
+      item.classList.remove('active');
    });
-});
+   link.classList.add('active');
+}
+
+// привязываем функцию к событию прокрутки страницы
+window.addEventListener('scroll', checkPosition);
+
+// вызываем функцию при загрузке страницы для установки активного класса
+checkPosition();
 
 //---------------------------------------------------------------------------------------------------------
 let mailLink = document.querySelector('.mail');
@@ -51,7 +70,6 @@ mailLink.addEventListener('click', function (event) {
    event.preventDefault();
    linkText.classList.add('show');
 });
-
 
 mailLink.addEventListener('dblclick', function (event) {
    event.preventDefault();

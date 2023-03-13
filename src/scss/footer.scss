@@ -45,7 +45,7 @@
 
    a {
       display: inline-block;
-      width: 55px;
+      width: 45px;
       transition: all 0.4s ease;
 
       &:not(:last-child) {
@@ -63,16 +63,17 @@
 
       span {
          cursor: text;
+         font-size: 16px;
          position: absolute;
          top: 11px;
-         left: 55px;
+         left: 45px;
          transform: scale(0);
          transform-origin: left;
          transition: all 0.5s ease-in-out;
 
          &.show {
             transform: scale(1);
-            left: 75px;
+            left: 65px;
          }
       }
    }
@@ -82,4 +83,5 @@
    border-top: 2px solid #292929;
    text-align: center;
    padding: 20px 0;
+   font-size: 16px;
 }
