@@ -1,0 +1,54 @@
+//?----IMPORT FONTS-------------------------------------------------------------------------------------
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:100,200,300,regular,500,600,700,800,900);
+
+@import 'vars';
+@import 'null';
+
+//?-----ОБЩИЕ СТИЛИ--------------------------------------------------------------------------------
+.wrapper {
+   min-height: 100%;
+   display: flex;
+   flex-direction: column;
+   overflow: hidden;
+
+   // Прижимаем footer книзу
+   >main {
+      flex: 1 1 auto;
+   }
+
+   // Фикс для слайдеров
+   //>* {
+   //   min-width: 0;
+   //}
+}
+
+.container {
+   //max-width: 90%;
+   //margin: 0 auto;
+   padding: 0 5%;
+}
+
+@media (min-width: 1445px) {
+   .container {
+      max-width: 1445px;
+      margin: 0 auto;
+   }
+}
+
+html,
+body {
+   scroll-behavior: smooth;
+}
+
+body {
+   background-color: #1A1A1A;
+}
+
+//?----HEADER-------------------------------------------------------------------------------------
+@import 'header';
+
+//?----MAIN / PAGE-------------------------------------------------------------------------------------
+@import 'main';
+
+//?----FOOTER-------------------------------------------------------------------------------------
+@import 'footer';

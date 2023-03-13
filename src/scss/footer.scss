@@ -1,0 +1,85 @@
+@import 'vars';
+
+.footer {
+   background-color: #000;
+}
+
+.footer__quote {
+   text-align: center;
+   margin-bottom: 50px;
+
+   q {
+      font-weight: 300;
+      font-style: italic;
+      margin-bottom: 10px;
+      display: inline-block;
+   }
+
+   cite {
+      font-style: normal;
+      position: relative;
+
+      &::before,
+      &::after {
+         content: '';
+         width: 40px;
+         height: 1px;
+         background-color: #fff;
+         position: absolute;
+         top: 12px;
+      }
+
+      &::after {
+         right: -50px;
+      }
+
+      &::before {
+         left: -50px;
+      }
+   }
+}
+
+.footer__links {
+   text-align: center;
+   margin-bottom: 30px;
+
+   a {
+      display: inline-block;
+      width: 55px;
+      transition: all 0.4s ease;
+
+      &:not(:last-child) {
+         margin-right: 30px;
+      }
+
+      img {
+         width: 100%;
+      }
+   }
+
+   .mail {
+      position: relative;
+      cursor: pointer;
+
+      span {
+         cursor: text;
+         position: absolute;
+         top: 11px;
+         left: 55px;
+         transform: scale(0);
+         transform-origin: left;
+         transition: all 0.5s ease-in-out;
+
+         &.show {
+            transform: scale(1);
+            left: 75px;
+         }
+      }
+   }
+}
+
+.footer__bottom {
+   border-top: 2px solid #292929;
+   text-align: center;
+   padding: 20px 0;
+}
