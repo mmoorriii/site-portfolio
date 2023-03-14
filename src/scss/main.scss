@@ -20,6 +20,14 @@
    background-attachment: fixed;
 }
 
+.wrapper.light {
+   .page__preview {
+      background: url('../img/background-preview-light.png');
+      background-size: cover;
+      background-attachment: fixed;
+   }
+}
+
 .preview__row {
    padding: 180px 0 100px;
    display: flex;
@@ -145,6 +153,12 @@
    padding: 0 0 80px;
 }
 
+.wrapper.light {
+   .page__skills {
+      background-color: #eeeeee;
+   }
+}
+
 .skills__row {
    display: flex;
    flex-wrap: wrap;
@@ -197,6 +211,14 @@
    background: url('../img/background-projects.png');
    background-size: cover;
    background-attachment: fixed;
+}
+
+.wrapper.light {
+   .page__projects {
+      background: url('../img/background-projects-light.png');
+      background-size: cover;
+      background-attachment: fixed;
+   }
 }
 
 .projects__row {
@@ -276,5 +298,11 @@
       span {
          color: $otherColor;
       }
+   }
+}
+
+.wrapper.light {
+   .item__info {
+      color: $textColor;
    }
 }

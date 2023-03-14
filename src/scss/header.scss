@@ -12,6 +12,16 @@
       padding: 20px 0;
       background-color: rgba(0, 0, 0, 0.76);
       z-index: 5;
+      backdrop-filter: blur(4px);
+      color: $textColor;
+   }
+}
+
+.wrapper.light {
+   .header.fixed {
+      .theme {
+         background-color: #fff;
+      }
    }
 }
 
@@ -39,7 +49,7 @@
    font-weight: 900;
    font-size: 20px;
    line-height: 26px;
-   transition: 0.3s ease;
+   transition: all 0.3s ease;
 
    &.active,
    &:hover {
@@ -48,5 +58,50 @@
 
    &:not(:last-child) {
       margin-right: 25px;
+   }
+}
+
+.header__nav {
+   display: flex;
+}
+
+.theme {
+   width: 28px;
+   height: 28px;
+   background-color: #292929;
+   border-radius: 50%;
+   cursor: pointer;
+   position: relative;
+   left: 15px;
+   transition: all 0.3s ease;
+
+   .dark {
+      display: block;
+      width: 38px;
+      position: absolute;
+      top: -5px;
+      left: -5px;
+   }
+
+   .light {
+      display: none;
+   }
+}
+
+.wrapper.light {
+   .theme {
+      background-color: #CDCDCD;
+
+      .dark {
+         display: none;
+      }
+
+      .light {
+         display: block;
+         width: 22px;
+         position: absolute;
+         top: 3px;
+         left: 2.5px;
+      }
    }
 }

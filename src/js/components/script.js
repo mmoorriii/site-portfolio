@@ -75,3 +75,4 @@ mailLink.addEventListener('dblclick', function (event) {
    event.preventDefault();
    linkText.classList.remove('show');
 });
+//-----------------------------------------------------------------------------------------------------------------------------------------
