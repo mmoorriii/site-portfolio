@@ -113,3 +113,59 @@
    padding: 20px 0;
    font-size: 16px;
 }
+
+@media (max-width: 930px) {
+   .footer__links {
+      .mail {
+         span {
+            top: 35px;
+            left: -89px;
+            transform: scale(0);
+            transform-origin: top;
+            transition: all 0.5s ease-in-out;
+
+            &.show {
+               transform: scale(1);
+               left: -89px;
+               top: 55px;
+            }
+         }
+      }
+   }
+}
+
+@media (max-width: 630px) {
+   .footer__quote {
+      margin-bottom: 30px;
+
+      q {
+         font-size: 16px;
+      }
+
+      cite {
+         font-size: 16px;
+      }
+   }
+
+   .footer__links {
+      a {
+         width: 35px;
+      }
+
+      .mail {
+         span {
+            font-size: 14px;
+
+            &.show {
+               transform: scale(1);
+               left: -151px;
+               top: 48px;
+            }
+         }
+      }
+   }
+
+   .footer__bottom {
+      font-size: 14px;
+   }
+}
