@@ -634,11 +634,19 @@ body .wrapper.light {
   }
 
   .header__list.show {
-    top: 0;
+    top: 3px;
   }
 
   .header__item {
     font-size: 18px;
+  }
+
+  .header__item:hover {
+    color: #ffffff;
+  }
+
+  .header__item.active {
+    color: #17FF78;
   }
 
   .theme {
@@ -650,6 +658,7 @@ body .wrapper.light {
     display: block;
     width: 26px;
     height: 26px;
+    cursor: pointer;
   }
 
   .title {
@@ -662,7 +671,7 @@ body .wrapper.light {
   }
 
   .preview__row {
-    padding: 120px 0 200px;
+    padding: 120px 0 180px;
     flex-direction: column-reverse;
     align-items: self-start;
   }
