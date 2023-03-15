@@ -145,11 +145,19 @@
    }
 
    .header__list.show {
-      top: 0;
+      top: 3px;
    }
 
    .header__item {
       font-size: 18px;
+
+      &:hover {
+         color: $textColor;
+      }
+
+      &.active {
+         color: $otherColor;
+      }
    }
 
    .theme {
@@ -161,6 +169,7 @@
       display: block;
       width: 26px;
       height: 26px;
+      cursor: pointer;
    }
 }
 

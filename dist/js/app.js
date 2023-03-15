@@ -90,12 +90,7 @@ let linkText = document.querySelector('.link-text')
 
 mailLink.addEventListener('click', function (event) {
    event.preventDefault();
-   linkText.classList.add('show');
-});
-
-mailLink.addEventListener('dblclick', function (event) {
-   event.preventDefault();
-   linkText.classList.remove('show');
+   linkText.classList.toggle('show');
 });
 //-----SHOW MENU------------------------------------------------------------------------------------------------------------------------------------
 let menuBtn = document.querySelector('.menu');
