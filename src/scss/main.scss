@@ -80,8 +80,12 @@
 }
 
 @media (max-width: 930px) {
+   .page__preview {
+      min-height: fit-content;
+   }
+
    .preview__row {
-      padding: 120px 0 100px;
+      padding: 120px 0 200px;
       flex-direction: column-reverse;
       align-items: self-start;
    }
@@ -111,7 +115,7 @@
 
 @media (max-width: 630px) {
    .preview__row {
-      padding: 120px 0 50px;
+      padding: 120px 0 100px;
    }
 
    .preview__text {
@@ -217,6 +221,10 @@
 }
 
 @media (max-width: 930px) {
+   .page__about-me {
+      min-height: fit-content;
+   }
+
    .about-me__img {
       display: none;
    }

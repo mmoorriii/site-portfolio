@@ -97,7 +97,13 @@ mailLink.addEventListener('dblclick', function (event) {
    event.preventDefault();
    linkText.classList.remove('show');
 });
-//-----------------------------------------------------------------------------------------------------------------------------------------
+//-----SHOW MENU------------------------------------------------------------------------------------------------------------------------------------
+let menuBtn = document.querySelector('.menu');
+
+menuBtn.addEventListener('click', () => {
+   document.querySelector('.header').classList.toggle('show');
+   document.querySelector('.header__list').classList.toggle('show');
+})
 let btnChangeTheme = document.querySelector('.theme');
 let wrapper = document.querySelector('.wrapper');
 var savedTheme = localStorage.getItem("theme");

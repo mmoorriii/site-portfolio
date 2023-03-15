@@ -121,6 +121,10 @@ body .wrapper.light {
   color: #ffffff;
 }
 
+.header.fixed.show {
+  padding: 30px 0 20px;
+}
+
 .wrapper.light .header.fixed .theme {
   background-color: #fff;
 }
@@ -150,6 +154,7 @@ body .wrapper.light {
   font-size: 20px;
   line-height: 26px;
   transition: all 0.3s ease;
+  margin-right: 25px;
 }
 
 .header__item.active,
@@ -157,8 +162,8 @@ body .wrapper.light {
   color: #17FF78;
 }
 
-.header__item:not(:last-child) {
-  margin-right: 25px;
+.header__item:last-child {
+  margin-right: 0;
 }
 
 .header__nav {
@@ -188,6 +193,10 @@ body .wrapper.light {
   display: none;
 }
 
+.menu {
+  display: none;
+}
+
 .wrapper.light .theme {
   background-color: #CDCDCD;
 }
@@ -201,7 +210,15 @@ body .wrapper.light {
   width: 22px;
   position: absolute;
   top: 3px;
-  left: 2.5px;
+  left: 3px;
+}
+
+.wrapper.light .menu path {
+  fill: #000;
+}
+
+.wrapper.light .header.fixed .menu path {
+  fill: #fff;
 }
 
 .title {
@@ -607,16 +624,45 @@ body .wrapper.light {
     font-size: 20px;
   }
 
+  .header__list {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    justify-content: center;
+    transition: all 0.4s ease;
+  }
+
+  .header__list.show {
+    top: 0;
+  }
+
   .header__item {
     font-size: 18px;
+  }
+
+  .theme {
+    left: 0;
+    margin-right: 15px;
+  }
+
+  .menu {
+    display: block;
+    width: 26px;
+    height: 26px;
   }
 
   .title {
     font-size: 35px;
   }
 
+  .page__preview {
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+  }
+
   .preview__row {
-    padding: 120px 0 100px;
+    padding: 120px 0 200px;
     flex-direction: column-reverse;
     align-items: self-start;
   }
@@ -641,6 +687,11 @@ body .wrapper.light {
 
   .preview__subtitle {
     font-size: 32px;
+  }
+
+  .page__about-me {
+    min-height: -moz-fit-content;
+    min-height: fit-content;
   }
 
   .about-me__img {
@@ -720,7 +771,8 @@ body .wrapper.light {
   }
 
   .header__item {
-    font-size: 16px;
+    font-size: 14px;
+    margin-right: 10px;
   }
 
   .title {
@@ -729,7 +781,7 @@ body .wrapper.light {
   }
 
   .preview__row {
-    padding: 120px 0 50px;
+    padding: 120px 0 100px;
   }
 
   .preview__text {
