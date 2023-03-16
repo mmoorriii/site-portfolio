@@ -39,9 +39,43 @@
    font-weight: 900;
    font-size: 22px;
    line-height: 26px;
+   position: relative;
 
    span {
       color: $otherColor;
+   }
+
+   .switch-lang {
+      position: absolute;
+      top: -9px;
+      right: -32px;
+      font-size: 18px;
+      cursor: pointer;
+      line-height: 110%;
+
+      &:hover {
+         border-bottom: 1px solid white;
+      }
+   }
+}
+
+.wrapper.light {
+   .header__logo {
+      .switch-lang {
+         &:hover {
+            border-bottom: 1px solid black;
+         }
+      }
+   }
+
+   .header.fixed {
+      .header__logo {
+         .switch-lang {
+            &:hover {
+               border-bottom: 1px solid white;
+            }
+         }
+      }
    }
 }
 
@@ -133,6 +167,15 @@
 @media (max-width: 930px) {
    .header__logo {
       font-size: 20px;
+
+      .switch-lang {
+         position: absolute;
+         top: 4px;
+         right: -42px;
+         font-size: 16px;
+         cursor: pointer;
+         line-height: 110%;
+      }
    }
 
    .header__list {
