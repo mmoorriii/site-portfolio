@@ -33,6 +33,18 @@
       max-width: 1445px;
       margin: 0 auto;
    }
+
+   .page__preview {
+      min-height: fit-content;
+   }
+
+   .page__about-me {
+      min-height: fit-content;
+   }
+
+   .page__projects {
+      min-height: fit-content;
+   }
 }
 
 html,
