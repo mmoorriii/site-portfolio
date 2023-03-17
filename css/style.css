@@ -298,11 +298,16 @@ body .wrapper.light {
   position: relative;
   top: 10px;
   flex: 0 0 400px;
-  background-color: darkgray;
   border-radius: 50%;
   width: 400px;
   height: 400px;
   margin-right: 40px;
+}
+
+.preview__photo img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
 }
 
 .page__about-me {
@@ -517,7 +522,7 @@ body .wrapper.light {
 }
 
 .item__info_last .info__text_last {
-  bottom: 40%;
+  bottom: 39%;
   background-color: transparent;
   cursor: default;
 }
@@ -644,7 +649,7 @@ body .wrapper.light {
   .header__logo .switch-lang {
     position: absolute;
     top: 4px;
-    right: -42px;
+    right: -33px;
     font-size: 16px;
     cursor: pointer;
     line-height: 110%;
@@ -665,6 +670,7 @@ body .wrapper.light {
 
   .header__item {
     font-size: 18px;
+    line-height: 110%;
   }
 
   .header__item:hover {
@@ -830,7 +836,7 @@ body .wrapper.light {
   }
 
   .preview__subtitle {
-    font-size: 25px;
+    font-size: 24px;
   }
 
   .preview__photo {
@@ -913,5 +919,20 @@ body .wrapper.light {
 
   .footer__bottom {
     font-size: 14px;
+  }
+}
+
+@media (max-width: 375px) {
+  .header__list {
+    flex-wrap: wrap;
+  }
+
+  .header__item_ru {
+    margin-bottom: 5px;
+  }
+
+  .header.show.fixed,
+  .header.show {
+    padding: 40px 0 20px;
   }
 }
