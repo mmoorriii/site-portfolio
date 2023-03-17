@@ -639,6 +639,21 @@ body .wrapper.light {
     max-width: 1445px;
     margin: 0 auto;
   }
+
+  .page__preview {
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+  }
+
+  .page__about-me {
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+  }
+
+  .page__projects {
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+  }
 }
 
 @media (max-width: 930px) {
