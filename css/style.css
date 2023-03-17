@@ -931,8 +931,8 @@ body .wrapper.light {
     margin-bottom: 5px;
   }
 
-  .header.show.fixed,
-  .header.show {
+  .header-ru.show.fixed,
+  .header-ru.show {
     padding: 40px 0 20px;
   }
 }
