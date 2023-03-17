@@ -171,7 +171,7 @@
       .switch-lang {
          position: absolute;
          top: 4px;
-         right: -42px;
+         right: -33px;
          font-size: 16px;
          cursor: pointer;
          line-height: 110%;
@@ -193,6 +193,7 @@
 
    .header__item {
       font-size: 18px;
+      line-height: 110%;
 
       &:hover {
          color: $textColor;
@@ -224,5 +225,20 @@
    .header__item {
       font-size: 14px;
       margin-right: 10px;
+   }
+}
+
+@media (max-width: 375px) {
+   .header__list {
+      flex-wrap: wrap;
+   }
+
+   .header__item_ru {
+      margin-bottom: 5px;
+   }
+
+   .header.show.fixed,
+   .header.show {
+      padding: 40px 0 20px;
    }
 }
